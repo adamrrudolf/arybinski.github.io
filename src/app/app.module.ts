@@ -13,6 +13,10 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { StartTaskComponent } from './start-task/start-task.component';
 import { EndTaskComponent } from './end-task/end-task.component';
 
+// import { Angulartics2Module } from 'angulartics2';
+// import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
+import { GtagModule } from 'angular-gtag';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,9 @@ import { EndTaskComponent } from './end-task/end-task.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    GtagModule.forRoot({ trackingId: 'UA-119885445-1', trackPageviews: true })
+    // Angulartics2Module.forRoot([ Angulartics2GoogleTagManager ])
   ],
   providers: [],
   bootstrap: [AppComponent]

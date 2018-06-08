@@ -473,6 +473,18 @@ angular-cli-ghpages@^0.5.2:
     fs-extra "3.0.1"
     gh-pages "0.12.0"
 
+angular-gtag@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/angular-gtag/-/angular-gtag-1.0.2.tgz#bb8455ebd2dfb44583caf27339113ace39b62e16"
+  dependencies:
+    tslib "^1.7.1"
+
+angulartics2@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/angulartics2/-/angulartics2-6.1.0.tgz#4cbeb321f47b08d1063651ff32636ef1ec49e1c1"
+  dependencies:
+    tslib "^1.9.0"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
