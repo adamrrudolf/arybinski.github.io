@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Gtag } from 'angular-gtag';
 
@@ -9,7 +9,7 @@ import { Gtag } from 'angular-gtag';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewChecked {
   constructor(private router: Router,
     gtag: Gtag
   ) {
@@ -20,6 +20,12 @@ export class AppComponent {
   //    }
   //  });
  }
+
+ ngAfterViewChecked () {
+  if (window['dataLayer']) {
+      window['dataLayer'].push({'event': 'optimize.activate'});
+  }
+}
 
  sendEvent = () => {
   console.log('sending event to gtag');
