@@ -1,4 +1,4 @@
-import { Component, AfterViewChecked } from '@angular/core';
+import { Component, AfterViewChecked, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Gtag } from 'angular-gtag';
 
