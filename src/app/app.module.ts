@@ -6,38 +6,109 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import {
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule,
+} from '@angular/material';
 import { StartTaskComponent } from './start-task/start-task.component';
 import { EndTaskComponent } from './end-task/end-task.component';
+import { DrawableDirective } from './drawable.directive';
+import { ChartComponent } from './chart/chart.component';
+import { DrawingRecognitionComponent } from './drawing-recognition/drawing-recognition.component';
+import { TeachableComponent } from './teachable/teachable.component';
+import { YoloComponent } from './yolo/yolo.component';
 
-// import { Angulartics2Module } from 'angulartics2';
-// import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
-import { GtagModule } from 'angular-gtag';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     StartTaskComponent,
-    EndTaskComponent
+    EndTaskComponent,
+    DrawableDirective,
+    ChartComponent,
+    DrawingRecognitionComponent,
+    TeachableComponent,
+    YoloComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // ServiceWorkerModule.register('/EFlow/ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-    MaterialModule,
     LayoutModule,
-    MatToolbarModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
     MatButtonModule,
-    MatSidenavModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
     MatIconModule,
+    MatInputModule,
     MatListModule,
-    GtagModule.forRoot({ trackingId: 'UA-119885445-1', trackPageviews: true })
-    // Angulartics2Module.forRoot([ Angulartics2GoogleTagManager ])
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

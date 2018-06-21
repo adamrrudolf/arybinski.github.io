@@ -1,7 +1,4 @@
-import { Component, AfterViewChecked, HostListener } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { Gtag } from 'angular-gtag';
-
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -9,25 +6,10 @@ import { Gtag } from 'angular-gtag';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewChecked {
-  constructor(private router: Router,
-    gtag: Gtag
-  ) {
-  //   this.router.events.subscribe(event => {
-  //    if (event instanceof NavigationEnd) {
-  //      (<any>window).ga('set', 'page', event.urlAfterRedirects);
-  //      (<any>window).ga('send', 'pageview');
-  //    }
-  //  });
- }
+export class AppComponent implements OnInit {
 
- ngAfterViewChecked () {
-  if (window['dataLayer']) {
-      window['dataLayer'].push({'event': 'optimize.activate'});
+  ngOnInit() {
+
   }
-}
 
- sendEvent = () => {
-  console.log('sending event to gtag');
-}
 }
