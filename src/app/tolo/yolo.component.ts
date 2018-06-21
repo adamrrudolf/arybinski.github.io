@@ -14,7 +14,5 @@ export class YoloComponent implements OnInit {
   constructor() { }
 
   async ngOnInit() {
-
+    };
   }
-
-}
